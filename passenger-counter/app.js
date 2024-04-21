@@ -10,5 +10,6 @@ function increment(){
 function save(){
     let countStr = count + ' - '
     saveblock.textContent += countStr
-    console.log(count) // dapat akses count hasil increment
+    counter.innerText = 0
+    count = 0
 }
