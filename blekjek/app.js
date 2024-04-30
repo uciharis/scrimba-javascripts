@@ -10,7 +10,8 @@ let cardBoard = document.getElementById('carBoard');
 let sumBoard = document.getElementById('sumBoard');
 
 function startGame(){
-    cardBoard.textContent = 'Kartoe : '
+    cardBoard.textContent = 'Kartoe : ' + firstCard + '&' + secondCard
+    sumBoard.textContent = 'TOTal : ' + sum
     if (sum <=20){
         message = 'tarik kartu lagi bos ?'
     } else if (sum === 21){
