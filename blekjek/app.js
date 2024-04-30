@@ -5,7 +5,9 @@ let hasBlekjek = false;
 let isAlive = true;
 
 let message = '';
-
+let messageBoard = document.getElementById('message')
+let cardBoard = document.getElementById('carBoard')
+let sumBoard = document.getElementById('sumBoard')
 if (sum <=20){
     message = 'tarik kartu lagi bos ?'
 } else if (sum === 21){
