@@ -17,3 +17,13 @@ body {
     text-align: center;
     font-weight: bold;
 }
+
+button {
+    color: #016f32;
+    width: 150px;
+    background: gold;
+    padding: 2px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 2px;
+}
