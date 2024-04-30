@@ -6,7 +6,7 @@ let isAlive = true;
 
 let message = '';
 let messageBoard = document.getElementById('message');
-let cardBoard = document.getElementById('carBoard');
+let cardBoard = document.getElementById('cardBoard');
 let sumBoard = document.getElementById('sumBoard');
 
 function startGame(){
