@@ -21,7 +21,5 @@ function startGame(){
         message = 'tolol kalah lu tol ..'
         isAlive = false; // ini state
     }
+    messageBoard.textContent = message
 }
-
-console.log(isAlive);
-console.log(message);
