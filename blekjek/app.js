@@ -1,5 +1,6 @@
-let firstCard = 10;
-let secondCard = 11;
+let firstCard = 7;
+let secondCard = 9;
+let cards = [firstCard,secondCard]
 let sum = firstCard + secondCard;
 let hasBlekjek = false;
 let isAlive = true;
@@ -10,7 +11,7 @@ let cardBoard = document.getElementById('cardBoard');
 let sumBoard = document.getElementById('sumBoard');
 
 function startGame(){
-    cardBoard.textContent = 'Kartoe : ' + firstCard + '&' + secondCard
+    cardBoard.textContent = 'Kartoe : ' + cards[0] + '&' + cards[1]
     sumBoard.textContent = 'TOTal : ' + sum
     if (sum <=20){
         message = 'tarik kartu lagi bos ?'
@@ -22,4 +23,11 @@ function startGame(){
         isAlive = false; // ini state
     }
     messageBoard.textContent = message
+}
+
+function newCard(){
+    console.log('game baroeee')
+    let card = 7
+    sum+= card
+    startGame()
 }
