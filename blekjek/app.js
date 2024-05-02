@@ -1,5 +1,5 @@
-let firstCard = 7;
-let secondCard = 9;
+let firstCard = getRandom();
+let secondCard = getRandom();
 let cards = [firstCard,secondCard]
 let sum = firstCard + secondCard;
 let hasBlekjek = false;
@@ -10,12 +10,14 @@ let messageBoard = document.getElementById('message');
 let cardBoard = document.getElementById('cardBoard');
 let sumBoard = document.getElementById('sumBoard');
 
+
+
 function startGame(){
    // cardBoard.textContent = 'Kartoe : ' + cards[0] + '&' + cards[1]
    // function above is manual, lets make automatic ones
    cardBoard.textContent = 'Kartoe : '
    for (let i=0;i<cards.length;i++){
-    cardBoard.textContent += cards[i] + '&'
+    cardBoard.textContent += cards[i] + ' '
    }
     sumBoard.textContent = 'TOTal : ' + sum
     if (sum <=20){
@@ -32,7 +34,7 @@ function startGame(){
 
 function newCard(){
     console.log('game baroeee')
-    let card = 7
+    let card = getRandom()
     sum+= card
     startGame()
 }
