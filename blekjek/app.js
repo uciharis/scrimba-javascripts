@@ -11,7 +11,12 @@ let cardBoard = document.getElementById('cardBoard');
 let sumBoard = document.getElementById('sumBoard');
 
 function startGame(){
-    cardBoard.textContent = 'Kartoe : ' + cards[0] + '&' + cards[1]
+   // cardBoard.textContent = 'Kartoe : ' + cards[0] + '&' + cards[1]
+   // function above is manual, lets make automatic ones
+   cardBoard.textContent = 'Kartoe : '
+   for (let i=0;i<cards.length;i++){
+    cardBoard.textContent += cards[i]
+   }
     sumBoard.textContent = 'TOTal : ' + sum
     if (sum <=20){
         message = 'tarik kartu lagi bos ?'
