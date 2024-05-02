@@ -15,7 +15,7 @@ function startGame(){
    // function above is manual, lets make automatic ones
    cardBoard.textContent = 'Kartoe : '
    for (let i=0;i<cards.length;i++){
-    cardBoard.textContent += cards[i]
+    cardBoard.textContent += cards[i] + '&'
    }
     sumBoard.textContent = 'TOTal : ' + sum
     if (sum <=20){
