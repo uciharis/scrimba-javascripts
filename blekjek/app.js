@@ -9,7 +9,9 @@ let message = '';
 let messageBoard = document.getElementById('message');
 let cardBoard = document.getElementById('cardBoard');
 let sumBoard = document.getElementById('sumBoard');
-
+function getRandom(){
+    return 5
+}
 
 
 function startGame(){
