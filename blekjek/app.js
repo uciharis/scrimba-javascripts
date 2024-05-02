@@ -36,5 +36,6 @@ function newCard(){
     console.log('game baroeee')
     let card = getRandom()
     sum+= card
+    cards.push(card)
     startGame()
 }
