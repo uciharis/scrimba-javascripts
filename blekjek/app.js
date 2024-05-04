@@ -7,6 +7,10 @@ let hasBlekjek = false;
 let isAlive = false; //harus diassigne true saat start a game
 // bukan pada saat standby. jadi rubah false
 
+let saldo = 145
+let saldoBoard = document.getElementById('saldoBoard')
+saldoBoard.textContent = 'saldo : Rp. ' + saldo;
+
 let message = '';
 let messageBoard = document.getElementById('message');
 let cardBoard = document.getElementById('cardBoard');
@@ -59,8 +63,11 @@ function startGame(){
     console.log("🚀 ~ startGame ~ console.log(sum):", console.log(sum))
 
 function newCard(){
-    let card = getRandom()
-    sum+= card
-    cards.push(card)
-    startGame()
+    // newCard allowed kalau masih alive dan belum blackjak
+    if (isAlive == tue && hasBlekjek == false){
+        let card = getRandom()
+        sum+= card
+        cards.push(card)
+        startGame()
+    }
 }
