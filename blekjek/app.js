@@ -10,7 +10,7 @@ let messageBoard = document.getElementById('message');
 let cardBoard = document.getElementById('cardBoard');
 let sumBoard = document.getElementById('sumBoard');
 function getRandom(){
-    return 5
+    return Math.floor(Math.random() * 13) +1
 }
 
 
