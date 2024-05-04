@@ -1,9 +1,11 @@
-let firstCard = getRandom();
-let secondCard = getRandom();
-let cards = [firstCard,secondCard]
-let sum = firstCard + secondCard;
+// let firstCard = getRandom();
+// let secondCard = getRandom();
+// inisialisasi var diatas ke dalam fungsi startGame()
+let cards = [] //set to empty dan isi cards di dalam fungsi startGame
+let sum = 0 //set to zero
 let hasBlekjek = false;
-let isAlive = true;
+let isAlive = false; //harus diassigne true saat start a game
+// bukan pada saat standby. jadi rubah false
 
 let message = '';
 let messageBoard = document.getElementById('message');
@@ -22,6 +24,13 @@ function getRandom(){
 
 
 function startGame(){
+    isAlive = true
+    let firstCard = getRandom();
+    let secondCard = getRandom();
+    cards = [firstCard,secondCard];
+    sum = cards[0] + cards[1]
+
+
    // cardBoard.textContent = 'Kartoe : ' + cards[0] + '&' + cards[1]
    // function above is manual, lets make automatic ones
    cardBoard.textContent = 'Kartoe : '
@@ -40,9 +49,16 @@ function startGame(){
     }
     messageBoard.textContent = message
 }
+    console.log("🚀 ~ startGame ~ console.log(sum):", console.log(sum))
+    console.log("🚀 ~ startGame ~ console.log(sum):", console.log(sum))
+    console.log("🚀 ~ startGame ~ console.log(sum):", console.log(sum))
+    console.log("🚀 ~ startGame ~ console.log(sum):", console.log(sum))
+    console.log("🚀 ~ startGame ~ console.log(sum):", console.log(sum))
+    console.log("🚀 ~ startGame ~ console.log(sum):", console.log(sum))
+    console.log("🚀 ~ startGame ~ console.log(sum):", console.log(sum))
+    console.log("🚀 ~ startGame ~ console.log(sum):", console.log(sum))
 
 function newCard(){
-    console.log('game baroeee')
     let card = getRandom()
     sum+= card
     cards.push(card)
