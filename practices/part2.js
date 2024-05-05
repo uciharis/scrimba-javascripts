@@ -69,7 +69,7 @@ for (let i=0;i<bigCountries.length;i++){
 /**
 --- pake object method
 
- */
+
 let bigCountries = [
     'tuvalu',
     'india',
@@ -84,13 +84,30 @@ let bigCountries = [
 // pop() push() work for last array
 console.log(bigCountries) //cek kondisi awal
 bigCountries.shift(); // tendang tuvalu
-console.log(bigCountries); //cek setelah tendang
+// console.log(bigCountries); //cek setelah tendang
 bigCountries.unshift('cinak')
-console.log(bigCountries) // cinak sudah ada di no-1
+// console.log(bigCountries) // cinak sudah ada di no-1
 
 // tendang monakok
 bigCountries.pop()
-console.log(bigCountries) //cek stlh tendang monakok
+// console.log(bigCountries) //cek stlh tendang monakok
 bigCountries.push('pakistan')
 console.log(bigCountries) // cek hasil
+*/
 
+/*
+------- logic operator --------
+
+
+
+
+ */
+
+let dayNum = 13;
+let day = 'friday';
+
+if (dayNum ===13 && day === 'friday'){
+    console.log('😵😵😵')
+} else {
+    console.log('TGIF')
+};
