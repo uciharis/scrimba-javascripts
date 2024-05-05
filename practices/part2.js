@@ -50,3 +50,18 @@ if (age <6){
 }
 
 */
+
+/*
+------------------ for loop
+*/
+
+let bigCountries = [
+    'cinak',
+    'india',
+    'amrika',
+    'indoensia',
+    'pakistan'
+];
+for (let i=0;i<bigCountries.length;i++){
+    console.log(bigCountries[i])
+}
