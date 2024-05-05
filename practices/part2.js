@@ -63,5 +63,5 @@ let bigCountries = [
     'pakistan'
 ];
 for (let i=0;i<bigCountries.length;i++){
-    console.log(bigCountries[i])
+    console.log('- '+bigCountries[i])
 }
