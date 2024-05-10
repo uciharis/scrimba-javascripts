@@ -1,0 +1,19 @@
+body {
+    padding: 30px;
+    background: burlywood;
+    text-align: center;
+}
+
+#kotakapel {
+background: lavender;
+border-radius: 5px;
+height: 30px;
+margin: 10px 0;
+}
+
+#kotakjeruk {
+    background: goldenrod;
+    border-radius: 5px;
+    height: 30px;
+    margin: 10px 0;
+    }
