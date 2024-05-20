@@ -1,5 +1,5 @@
 let simpan = document.getElementById('simpan');
 
-function klikSimpan(){
-    console.log('simpan')
-}
+simpan.addEventListener('click', function(){
+console.log('klik klik')
+})
