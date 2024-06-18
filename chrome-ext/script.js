@@ -1,5 +1,8 @@
-let simpan = document.getElementById('simpan');
+let myLeads = [];
 
-simpan.addEventListener('click', function(){
-console.log('klik klik')
+const inputElement = document.getElementById('input-element');
+const simpanBtn = document.getElementById('simpan-btn');
+
+simpanBtn.addEventListener('click', function(){
+console.log('klak klik')
 })

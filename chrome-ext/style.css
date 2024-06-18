@@ -13,9 +13,10 @@ input {
 
 button {
     background: #5f9341;
-    padding: 10px;
+    padding: 15px 10px;
     color: whitesmoke;
     border: none;
     padding: 5px;
-    margin: 20px;
+    margin: 10px 5px;
+    box-sizing: border-box;
 }
