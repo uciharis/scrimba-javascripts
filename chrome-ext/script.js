@@ -9,10 +9,15 @@ myLeads.push(inputElement);
 console.log(inputElement);
 })
 
+// cara sendiri
+// for (let data of myLeads){
+//     console.log(data);
+//     let liElement = document.createElement('li');
+//     liElement.textContent +=data;
+//     ulElement.appendChild(liElement);
+// }
 
-for (let data of myLeads){
-    console.log(data);
-    let liElement = document.createElement('li');
-    liElement.textContent +=data;
-    ulElement.appendChild(liElement);
+//cara master scrimba
+for (let i=0 ;i<myLeads.length; i++){
+    ulElement.innerHTML += '<li>' + myLeads[i] + '</li>';
 }
