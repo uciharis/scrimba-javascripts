@@ -1,34 +1,34 @@
-let myLeads = ['a.com','b.com','c.com']
+let myLeads = []
 
-const inputElement = document.getElementById('input-element').value;
+const inputElement = document.getElementById('input-element');
 const simpanBtn = document.getElementById('simpan-btn');
 const ulElement = document.getElementById('ul-element');
 
 simpanBtn.addEventListener('click', function(){
-myLeads.push(inputElement);
-console.log(inputElement);
+myLeads.push(inputElement.value);
+inputElement.value= '';
+renderLeads();
 })
 
- //cara sendiri
- for (let data of myLeads){
-     console.log(data);
-     let liElement = document.createElement('li');
-     liElement.textContent +=data;
-     ulElement.appendChild(liElement);
- }
-
- /*
-// cara master scrimba- old ways
-for (let i=0 ;i<myLeads.length; i++){
-    ulElement.innerHTML += '<li>' + myLeads[i] + '</li>';
-}
-*/
-
+// --------------------------------------------------------//
+//cara sendiri #1
 /*
-// cara master scrimba- old ways (improved)
-let listItem = '';
-for (let i=0 ;i<myLeads.length; i++){
-    listItems += '<li>' + myLeads[i] + '</li>';
+for (let data of myLeads){
+    let liElement = document.createElement('li');
+    console.log(data);
+    liElement.textContent +=data;
+    ulElement.appendChild(liElement);
 }
-ulElemet.innerHTML = listItems; // faster bcoz outside the loop
 */
+// --------------------------------------------------------//
+
+// cara master scrimba- old ways (improved)
+function renderLeads(){
+    let listItem = ''
+    for (let i=0 ;i<myLeads.length; i++){
+        listItem += '<li>' + myLeads[i] + '</li>';
+    }
+    ulElement.innerHTML = listItem; // faster
+    // because we dont loop the dom, but finish the loop
+    // the render the result
+}
