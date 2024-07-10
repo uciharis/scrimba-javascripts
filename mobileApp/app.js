@@ -1,6 +1,6 @@
 //import { add } from "./function.js";
 import {initializeApp} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-import {getDatabase,ref, push, onValue} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+import {getDatabase, ref, push, onValue, remove} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
 // your url reference DB
 const appSettings = {
@@ -34,6 +34,14 @@ function appendItemChart(object){
     let objectValue = object[1]
     let appendElement = document.createElement('li');
     appendElement.textContent = objectValue;
+
+    // func for remove items
+    appendElement.addEventListener('dblclick', function(){
+        //console.log(objectID)
+        let lokasiDB = ref(database,`shoplist/${objectID}`)
+        remove(lokasiDB)
+    })
+
     shopList.append(appendElement)
 }
 
