@@ -1,6 +1,14 @@
+import { add } from "./function.js";
+import {initializeApp} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
+
 const appSettings = {
     databaseURL: 'https://kucingchartshop-default-rtdb.asia-southeast1.firebasedatabase.app/'
 }
+
+// ----------------------- //
+let jumlah = add(1,3)
+console.log(jumlah)
+
 
 const addBtn = document.getElementById('add-btn');
 const inputField = document.getElementById('input-field');
