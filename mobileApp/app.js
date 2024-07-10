@@ -1,6 +1,6 @@
 //import { add } from "./function.js";
 import {initializeApp} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-import {getDatabase,ref, push } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+import {getDatabase,ref, push, onValue} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
 // your url reference DB
 const appSettings = {
@@ -24,6 +24,9 @@ const shopList = document.getElementById('shop-list')
 function resetField(){
     inputField.value = '';
 }
+function resetShoppingList(){
+    shopList.innerHTML = ''
+}
 
 function appendItemChart(object){
     shopList.innerHTML += `<li>${object}</li>`
@@ -33,6 +36,21 @@ addBtn.addEventListener('click', function(){
     let inputFieldValue = inputField.value;
 
     push(shoppingListinDB,inputFieldValue);
-   resetField();
-    appendItemChart(inputFieldValue);
+    resetField();
+})
+
+//fetch database
+onValue(shoppingListinDB, function(snapshot){
+
+    //console.log(snapshot.val())
+    let objectItemsToArray = Object.values(snapshot.val());
+    //console.log(objectItemsToArray);
+    // loop the items
+    resetShoppingList();
+    let listItems;
+    for (let i =0; i<objectItemsToArray.length; i++){
+        //console.log(objectItemsToArray[i]);
+        listItems = objectItemsToArray[i]
+        appendItemChart(listItems);
+    }
 })
