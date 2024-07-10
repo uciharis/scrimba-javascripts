@@ -2,7 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
-    background-color: azure;
+    background-color: #EAEAEA;
 }
 
 .container {
@@ -12,6 +12,10 @@ html, body {
     margin: 30px auto;
 }
 
+img {
+    width: 60%;
+
+}
 
 input {
     color: black;
