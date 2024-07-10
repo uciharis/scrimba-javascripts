@@ -17,7 +17,7 @@ a {
 }
 .thumbnail {
     width: 180px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 img {
