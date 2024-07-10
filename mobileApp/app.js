@@ -29,7 +29,12 @@ function resetShoppingList(){
 }
 
 function appendItemChart(object){
-    shopList.innerHTML += `<li>${object}</li>`
+    //shopList.innerHTML += `<li>${object}</li>`
+    let objectID = object[0]
+    let objectValue = object[1]
+    let appendElement = document.createElement('li');
+    appendElement.textContent = objectValue;
+    shopList.append(appendElement)
 }
 
 addBtn.addEventListener('click', function(){
@@ -43,7 +48,7 @@ addBtn.addEventListener('click', function(){
 onValue(shoppingListinDB, function(snapshot){
 
     //console.log(snapshot.val())
-    let objectItemsToArray = Object.values(snapshot.val());
+    let objectItemsToArray = Object.entries(snapshot.val());
     //console.log(objectItemsToArray);
     // loop the items
     resetShoppingList();
@@ -51,6 +56,11 @@ onValue(shoppingListinDB, function(snapshot){
     for (let i =0; i<objectItemsToArray.length; i++){
         //console.log(objectItemsToArray[i]);
         listItems = objectItemsToArray[i]
+        //console.log(listItems)
+        let listItemsID = listItems[0]
+        //console.log(listItemsID)
+        let listItemsValue = listItems[1]
+        //console.log(listItemsValue)
         appendItemChart(listItems);
     }
 })
