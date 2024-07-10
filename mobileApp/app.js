@@ -54,21 +54,24 @@ addBtn.addEventListener('click', function(){
 
 //fetch database
 onValue(shoppingListinDB, function(snapshot){
-
-    //console.log(snapshot.val())
-    let objectItemsToArray = Object.entries(snapshot.val());
-    //console.log(objectItemsToArray);
-    // loop the items
-    resetShoppingList();
-    let listItems;
-    for (let i =0; i<objectItemsToArray.length; i++){
-        //console.log(objectItemsToArray[i]);
-        listItems = objectItemsToArray[i]
-        //console.log(listItems)
-        let listItemsID = listItems[0]
-        //console.log(listItemsID)
-        let listItemsValue = listItems[1]
-        //console.log(listItemsValue)
-        appendItemChart(listItems);
+    if (snapshot.exists()){
+        //console.log(snapshot.val())
+        let objectItemsToArray = Object.entries(snapshot.val());
+        //console.log(objectItemsToArray);
+        // loop the items
+        resetShoppingList();
+        let listItems;
+        for (let i =0; i<objectItemsToArray.length; i++){
+            //console.log(objectItemsToArray[i]);
+            listItems = objectItemsToArray[i]
+            //console.log(listItems)
+            let listItemsID = listItems[0]
+            //console.log(listItemsID)
+            let listItemsValue = listItems[1]
+            //console.log(listItemsValue)
+            appendItemChart(listItems);
+        }
+    } else {
+        shopList.innerHTML = 'kosong hehe ..'
     }
 })
