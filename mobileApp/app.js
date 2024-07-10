@@ -1,19 +1,26 @@
-import { add } from "./function.js";
-import {initializeApp} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
+//import { add } from "./function.js";
+import {initializeApp} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+import {getDatabase,ref, push } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+
+// your url reference DB
 const appSettings = {
-    databaseURL: 'https://kucingchartshop-default-rtdb.asia-southeast1.firebasedatabase.app/'
+    databaseURL: "https://kucingchartshop-default-rtdb.asia-southeast1.firebasedatabase.app"
 }
 const app = initializeApp(appSettings);
+const database = getDatabase(app);
+const shoppingListinDB = ref(database, "shoplist")
 
 // ----------------------- //
-let jumlah = add(1,3)
-console.log(jumlah)
-console.log(app)
+// let jumlah = add(1,3);
+// console.log(jumlah);
+// console.log(app);
 
 
 const addBtn = document.getElementById('add-btn');
 const inputField = document.getElementById('input-field');
 addBtn.addEventListener('click', function(){
     let inputFieldValue = inputField.value;
+
+    push(shoppingListinDB,inputFieldValue);
     console.log(inputFieldValue);
 })
