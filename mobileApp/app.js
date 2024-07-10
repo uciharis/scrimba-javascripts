@@ -20,10 +20,19 @@ const addBtn = document.getElementById('add-btn');
 const inputField = document.getElementById('input-field');
 const shopList = document.getElementById('shop-list')
 
+// reset the input field into blank after submit items
+function resetField(){
+    inputField.value = '';
+}
+
+function appendItemChart(object){
+    shopList.innerHTML += `<li>${object}</li>`
+}
+
 addBtn.addEventListener('click', function(){
     let inputFieldValue = inputField.value;
 
     push(shoppingListinDB,inputFieldValue);
-    inputField.value =''
-    shopList.innerHTML += `<li>${inputFieldValue}</li>`
+   resetField();
+    appendItemChart(inputFieldValue);
 })
