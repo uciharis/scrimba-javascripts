@@ -84,6 +84,7 @@ ul li:hover {
     text-align: right;
 }
 
-.empty-chart {
-    text-align: center;
+.kosong {
+    align-items: center;
+    justify-content: center;
 }

@@ -78,7 +78,8 @@ onValue(shoppingListinDB, function(snapshot){
             appendItemChart(listItems);
         }
     } else {
-        shopList.classList.add('empty-chart')
-        shopList.innerHTML = 'chart kosong'
+        shopList.innerHTML ='chart kosong';
+        shopList.classList.add('kosong');
+
     }
 })
