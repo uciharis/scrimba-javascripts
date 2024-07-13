@@ -50,7 +50,6 @@ addBtn.addEventListener('click', function(){
 
     let inputFieldValue = inputField.value.trim();
     if (inputFieldValue){
-        console.log(inputFieldValue);
         push(shoppingListinDB,inputFieldValue);
         resetField();
     } else {
