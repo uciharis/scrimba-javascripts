@@ -70,3 +70,11 @@ ul li:hover {
     background-color: red;
     cursor: pointer;
 }
+
+.dev {
+    font-size: 8px;
+    text-align: right;
+    color: rgb(145, 155, 155);
+    font-family: monospace;
+    font-style: oblique;
+}
