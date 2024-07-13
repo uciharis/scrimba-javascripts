@@ -78,6 +78,7 @@ onValue(shoppingListinDB, function(snapshot){
             appendItemChart(listItems);
         }
     } else {
-        shopList.innerHTML = 'kosong hehe ..'
+        shopList.classList.add('empty-chart')
+        shopList.innerHTML = 'chart kosong'
     }
 })

@@ -78,3 +78,12 @@ ul li:hover {
     font-family: monospace;
     font-style: oblique;
 }
+
+.petunjuk {
+    font-size: xx-small;
+    text-align: right;
+}
+
+.empty-chart {
+    text-align: center;
+}
