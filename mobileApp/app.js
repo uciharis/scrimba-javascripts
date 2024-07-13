@@ -53,6 +53,7 @@ addBtn.addEventListener('click', function(){
 })
 
 //fetch database
+// onValue akan ke-trigger kalo ada perubahan data (db)
 onValue(shoppingListinDB, function(snapshot){
     if (snapshot.exists()){
         //console.log(snapshot.val())
