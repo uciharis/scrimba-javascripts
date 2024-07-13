@@ -45,11 +45,17 @@ function appendItemChart(object){
     shopList.append(appendElement)
 }
 
-addBtn.addEventListener('click', function(){
-    let inputFieldValue = inputField.value;
 
-    push(shoppingListinDB,inputFieldValue);
-    resetField();
+addBtn.addEventListener('click', function(){
+
+    let inputFieldValue = inputField.value.trim();
+    if (inputFieldValue){
+        console.log(inputFieldValue);
+        push(shoppingListinDB,inputFieldValue);
+        resetField();
+    } else {
+        alert('inputannya kosong tuh kak 😅😅')
+    }
 })
 
 //fetch database
